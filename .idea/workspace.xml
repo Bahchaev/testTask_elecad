@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68917664-0358-424c-bd05-9f455053c31e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryNode/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Node/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Node/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CategoryNode/styles.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="68917664-0358-424c-bd05-9f455053c31e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617193097373</updated>
-      <workItem from="1617193098708" duration="10558000" />
+      <workItem from="1617193098708" duration="10832000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1617193529776</created>
@@ -111,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617197450704</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Функция getCategories переименована в getTree и теперь возвращает объект в формате, удобном для отображения дерева картинок.&#10;Создан компонент CategoryNode для отображения узла дерева для категории.">
+      <created>1617203932887</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617203932887</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,17 +120,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="Добавлен серверный запрос для получения данных о картинках.&#10;Добавлена функция getCategories для формирования списка категорий для узлов дерева" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен серверный запрос для получения данных о картинках.&#10;Добавлена функция getCategories для формирования списка категорий для узлов дерева" />
+    <MESSAGE value="Функция getCategories переименована в getTree и теперь возвращает объект в формате, удобном для отображения дерева картинок.&#10;Создан компонент CategoryNode для отображения узла дерева для категории." />
+    <option name="LAST_COMMIT_MESSAGE" value="Функция getCategories переименована в getTree и теперь возвращает объект в формате, удобном для отображения дерева картинок.&#10;Создан компонент CategoryNode для отображения узла дерева для категории." />
   </component>
   <component name="WindowStateProjectService">
     <state x="105" y="222" key="#ESLint" timestamp="1617199853125">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="105" y="222" key="#ESLint/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617199853125" />
-    <state x="1116" y="199" key="CommitChangelistDialog2" timestamp="1617197450288">
+    <state x="782" y="199" key="CommitChangelistDialog2" timestamp="1617203938129">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="1116" y="199" key="CommitChangelistDialog2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617197450288" />
+    <state x="782" y="199" key="CommitChangelistDialog2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617203938129" />
     <state x="293" y="319" key="FileChooserDialogImpl" timestamp="1617195095550">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
