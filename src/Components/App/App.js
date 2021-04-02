@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {doGetRequest} from "../../requests";
-import CategoryNode from "../CategoryNode";
+import CategoryTree from "../CategoryTree";
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     //const [categories, setCategories] = useState([]);
 
 
-    const getTree = (data) => {
+    const getTreeData = (data) => {
         let categories = {};
         data.map((item) => {
             if (!categories[item.category]) {categories[item.category] = []}
@@ -20,7 +20,6 @@ function App() {
 
         return categories
     };
-
 
     useEffect(() => {
         doGetRequest("http://contest.elecard.ru/frontend_data/catalog.json")
@@ -40,14 +39,10 @@ function App() {
     } else if (!isLoaded) {
         return <div>Загрузка...</div>
     } else {
-        const tree = getTree(data);
+        const treeData = getTreeData(data);
         return (
             <div className="App">
-                {Object.keys(tree).map((node) => {
-                    return (
-                        <CategoryNode category={node} images={tree[node]}/>
-                    )
-                })}
+                <CategoryTree treeData={treeData}/>
             </div>
         );
     }

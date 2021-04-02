@@ -1,5 +1,7 @@
 .button {
     margin-right: 10px;
+    width: 25px;
+    height: 25px;
 }
 
 .hidden {
@@ -7,6 +9,8 @@
 }
 
 .list {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 5px;
     list-style: none;
 }
