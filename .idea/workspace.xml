@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68917664-0358-424c-bd05-9f455053c31e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryTree/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryTree/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryTreeBranch/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryTreeBranchNode/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryTreeBranchNode/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CategoryNode/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CategoryNode/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CategoryTreeBranch/styles.module.css" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,13 +13,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1qWQveM7CiljRnsWn4x7v11YEX3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,18 +48,6 @@
       <recent name="C:\Users\wbahas\WebstormProjects\testtask_elecad\src\Components\App" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -82,6 +63,18 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -92,8 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617193097373</updated>
-      <workItem from="1617193098708" duration="10832000" />
-      <workItem from="1617349810349" duration="6467000" />
+      <workItem from="1617193098708" duration="12768000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1617193529776</created>
@@ -123,22 +115,18 @@
       <option name="project" value="LOCAL" />
       <updated>1617203932887</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Функция getCategories переименована в getTree и теперь возвращает объект в формате, удобном для отображения дерева картинок.&#10;Создан компонент CategoryNode для отображения узла дерева для категории.">
+      <created>1617203951995</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617203951995</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
@@ -151,21 +139,29 @@
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="105" y="222" key="#ESLint/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617199853125" />
-    <state x="782" y="199" key="CommitChangelistDialog2" timestamp="1617203938129">
+    <state x="782" y="199" key="CommitChangelistDialog2" timestamp="1617372808252">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="782" y="199" key="CommitChangelistDialog2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617203938129" />
+    <state x="782" y="199" key="CommitChangelistDialog2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617372808252" />
     <state x="293" y="319" key="FileChooserDialogImpl" timestamp="1617195095550">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
     <state x="293" y="319" key="FileChooserDialogImpl/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617195095550" />
-    <state x="138" y="294" key="Vcs.Push.Dialog.v2" timestamp="1617193792400">
+    <state x="737" y="277" key="MultipleFileMergeDialog" timestamp="1617372944817">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="138" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617193792400" />
-    <state x="356" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617193814458">
+    <state x="737" y="277" key="MultipleFileMergeDialog/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617372944817" />
+    <state x="138" y="294" key="Vcs.Push.Dialog.v2" timestamp="1617203958272">
       <screen x="0" y="0" width="2048" height="1122" />
     </state>
-    <state x="356" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617193814457" />
+    <state x="138" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617203958272" />
+    <state x="356" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617372835162">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="356" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617372835162" />
+    <state x="736" y="352" key="git4idea.merge.GitPullDialog" timestamp="1617371981716">
+      <screen x="0" y="0" width="2048" height="1122" />
+    </state>
+    <state x="736" y="352" key="git4idea.merge.GitPullDialog/0.0.2048.1122/2560.220.1920.1050@0.0.2048.1122" timestamp="1617371981716" />
   </component>
 </project>
