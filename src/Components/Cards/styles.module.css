@@ -1,0 +1,8 @@
+.cards {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: lightgray;
+}

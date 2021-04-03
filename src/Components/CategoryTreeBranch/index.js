@@ -16,15 +16,36 @@ export default function CategoryTreeBranch({categoryTitle, images}) {
                 <button onClick={expandHandleClick} className={styles.button}>{isShown ? '-' : '+'}</button>
                 <span>{categoryTitle}</span>
             </div>
+            {/*вариант 1: все картинки прогружаются в DOM*/}
             <ul className={isShown ? styles.list : styles.hidden}>
                 {
-                    images.map((image) => {
+                    images.map((image, index) => {
                         return (
-                            <CategoryTreeBranchNode imageSrc={image}/>
+                            <CategoryTreeBranchNode
+                                imageSrc={image}
+                                key={`${categoryTitle}-image=${index}`}
+                            />
                         )
                     })
+
                 }
             </ul>
+
+            {/*вариант 2: в DOM подгружаются только раскрытые картинки*/}
+            {/*{*/}
+            {/*    isShown ?*/}
+            {/*        <ul className={styles.list}>*/}
+            {/*            {*/}
+            {/*                images.map((image) => {*/}
+            {/*                    return (*/}
+            {/*                        <CategoryTreeBranchNode imageSrc={image}/>*/}
+            {/*                    )*/}
+            {/*                })*/}
+
+            {/*            }*/}
+            {/*        </ul> :*/}
+            {/*        <div/>*/}
+            {/*}*/}
         </div>
     )
 

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {doGetRequest} from "../../requests";
 import CategoryTree from "../CategoryTree";
+import Cards from "../Cards";
 
 function App() {
 
@@ -8,8 +9,12 @@ function App() {
     const [data, setData] = useState(null); //данные, полученные с сервера
     const [isLoaded, setIsLoaded] = useState(false); // статус загрузки данных с сервера
     const [error, setError] = useState(null); // ошибки при загрузке данных с сервера
-    //const [categories, setCategories] = useState([]);
-
+    // const sortList = {
+    //     category: 'по категории',
+    //     data: 'по дате',
+    //     name: 'по названию',
+    //     fileSize: 'по размеру файла'
+    // };
 
     const getTreeData = (data) => {
         let categories = {};
@@ -42,7 +47,8 @@ function App() {
         const treeData = getTreeData(data);
         return (
             <div className="App">
-                <CategoryTree treeData={treeData}/>
+                {/*<CategoryTree treeData={treeData}/>*/}
+                <Cards initData={data}/>
             </div>
         );
     }
