@@ -10,6 +10,7 @@ function App() {
     const [data, setData] = useState(null); //данные, полученные с сервера
     const [isLoaded, setIsLoaded] = useState(false); // статус загрузки данных с сервера
     const [error, setError] = useState(null); // ошибки при загрузке данных с сервера
+    const [view, setView] = useState('tree');
 
     const getTreeData = (data) => {
         let categories = {};
@@ -29,7 +30,7 @@ function App() {
                     setData(fetchedData);
 
                     //имитация задержки сервера для отображения инидкатора загрузки
-                    setTimeout(() => setIsLoaded(true), 2000);
+                    setTimeout(() => setIsLoaded(true), 20);
                 }
             )
             .catch((error) => {
@@ -47,8 +48,16 @@ function App() {
         const treeData = getTreeData(data);
         return (
             <div className="App">
-                {/*<CategoryTree treeData={treeData}/>*/}
-                <Cards initData={data}/>
+                <label htmlFor={'treeView'}>Дерево</label>
+                <input type="radio" name={'view'} value={'tree'} id={'treeView'} onChange={() => setView('tree')}
+                       defaultChecked/>
+                <input type="radio" name={'view'} value={'cards'} id={'cardView'} onChange={() => setView('cards')}/>
+                <label htmlFor={'cardView'}>Карточки</label>
+                {
+                    view === 'tree' ?
+                        <CategoryTree treeData={treeData}/> :
+                        <Cards initData={data}/>
+                }
             </div>
         );
     }

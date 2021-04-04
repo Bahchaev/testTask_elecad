@@ -1,25 +1,15 @@
-import React from "react";
+import React from 'react';
 import styles from './styles.module.css'
+import Pagination from '@material-ui/lab/Pagination';
 
-export default function Pagination({page, setPage}) {
 
-    const nextPage = () => {
-        setPage(++page)
+export default function PaginationControlled({page, setPage, pagesCount}) {
+    const handleChange = (event, value) => {
+        setPage(value);
     };
-
-    const prevPage = () => {
-        (page) > 1 ? setPage(--page) : setPage(1)
-    };
-
     return (
-        <div>
-            <button>{`<<`}</button>
-            <button onClick={prevPage}>{`<`}</button>
-
-            <span className={styles.currentPage}>{page}</span>
-
-            <button onClick={nextPage}>{`>`}</button>
-            <button>{`>>`}</button>
+        <div className={styles.pagination}>
+            <Pagination count={pagesCount} page={page} onChange={handleChange} />
         </div>
-    )
+    );
 }

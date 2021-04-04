@@ -14,7 +14,7 @@ export default function SortBar({setSortedBy}) {
             {
                 Object.keys(sortList).map((el) => {
                     return (
-                        <div>
+                        <div key={el}>
                             <input
                                 type="radio"
                                 name={'sortBy'}

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styles from './styles.module.css'
-import Pagination from "../Pagination";
+import PaginationControlled from "../Pagination";
 import Card from "../Card";
 import SortBar from "../SortBar";
 
@@ -8,6 +8,7 @@ export default function Cards({initData}) {
 
     const [page, setPage] = useState(1);
     const cardsInViewCount = 6;
+    let pagesCount = Math.trunc(initData / cardsInViewCount) + 1;
     const [closedCard, setClosedCard] = useState([]);
     const [sortedBy, setSortedBy] = useState('initial');
     const cards = initData.map((card, index) => {
@@ -31,12 +32,21 @@ export default function Cards({initData}) {
 
     //получить массив карточек, отображаемых на экране
     const getCardsForView = () => {
-        const nonClosedCards = cards
-            .sort((a,b) => a[sortedBy]-b[sortedBy]) //сортировка по выбранному пункту
+        const sortedFilteredCards = cards
+            .sort((a, b) => a[sortedBy] - b[sortedBy]) //сортировка по выбранному пункту
             .filter(card => !card.isClosed); // фильтрация списка от закрытых позиций
+
+        // рассчитаем макимальное число страниц
+        pagesCount = Math.trunc(sortedFilteredCards.length / cardsInViewCount);
+
+        // формируем массив отображаемых изображений и вернём его как результат функции
         const arr = [];
-        for (let i = ((page - 1) * cardsInViewCount); arr.length < cardsInViewCount; i++) {
-            arr.push(nonClosedCards[i])
+        for (
+            let i = ((page - 1) * cardsInViewCount);
+            arr.length < cardsInViewCount && i<sortedFilteredCards.length;
+            i++
+        ) {
+            arr.push(sortedFilteredCards[i])
         }
         return arr
     };
@@ -51,15 +61,17 @@ export default function Cards({initData}) {
                         <Card
                             card={card}
                             closeCard={() => closeCard(card.id)}
+                            key={card.timestamp}
                         />
                     )
                 })}
             </div>
-            <Pagination
+            <PaginationControlled
                 page={page}
                 setPage={setPage}
+                pagesCount={pagesCount}
             />
-            <button onClick={resetClosedCards}>RESET</button>
+            <button onClick={resetClosedCards}>Return closed</button>
         </div>
     )
 }
