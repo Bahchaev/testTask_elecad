@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {doGetRequest} from "../../requests";
 import CategoryTree from "../CategoryTree";
 import Cards from "../Cards";
+import LoadBar from "../LoadBar";
 
 function App() {
 
@@ -9,17 +10,13 @@ function App() {
     const [data, setData] = useState(null); //данные, полученные с сервера
     const [isLoaded, setIsLoaded] = useState(false); // статус загрузки данных с сервера
     const [error, setError] = useState(null); // ошибки при загрузке данных с сервера
-    // const sortList = {
-    //     category: 'по категории',
-    //     data: 'по дате',
-    //     name: 'по названию',
-    //     fileSize: 'по размеру файла'
-    // };
 
     const getTreeData = (data) => {
         let categories = {};
         data.map((item) => {
-            if (!categories[item.category]) {categories[item.category] = []}
+            if (!categories[item.category]) {
+                categories[item.category] = []
+            }
             categories[item.category].push(item.image);
         });
 
@@ -30,7 +27,9 @@ function App() {
         doGetRequest("http://contest.elecard.ru/frontend_data/catalog.json")
             .then((fetchedData) => {
                     setData(fetchedData);
-                    setIsLoaded(true);
+
+                    //имитация задержки сервера для отображения инидкатора загрузки
+                    setTimeout(() => setIsLoaded(true), 2000);
                 }
             )
             .catch((error) => {
@@ -42,7 +41,8 @@ function App() {
     if (error) {
         return <div>{error.message}</div>
     } else if (!isLoaded) {
-        return <div>Загрузка...</div>
+        console.log('is loaded');
+        return <LoadBar/>
     } else {
         const treeData = getTreeData(data);
         return (
