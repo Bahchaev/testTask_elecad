@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import styles from './styles.module.css'
 import {doGetRequest} from "../../requests";
 import CategoryTree from "../CategoryTree";
 import Cards from "../Cards";
@@ -42,17 +43,21 @@ function App() {
     if (error) {
         return <div>{error.message}</div>
     } else if (!isLoaded) {
-        console.log('is loaded');
         return <LoadBar/>
     } else {
         const treeData = getTreeData(data);
         return (
-            <div className="App">
-                <label htmlFor={'treeView'}>Дерево</label>
-                <input type="radio" name={'view'} value={'tree'} id={'treeView'} onChange={() => setView('tree')}
-                       defaultChecked/>
-                <input type="radio" name={'view'} value={'cards'} id={'cardView'} onChange={() => setView('cards')}/>
-                <label htmlFor={'cardView'}>Карточки</label>
+            <div className={styles.app}>
+                <div className={styles.vieSwitch}>
+
+                    <label htmlFor={'treeView'}>Дерево</label>
+                    <input type="radio" name={'view'} value={'tree'} id={'treeView'} onChange={() => setView('tree')}
+                           defaultChecked/>
+                    <input type="radio" name={'view'} value={'cards'} id={'cardView'}
+                           onChange={() => setView('cards')}/>
+                    <label htmlFor={'cardView'}>Карточки</label>
+                </div>
+
                 {
                     view === 'tree' ?
                         <CategoryTree treeData={treeData}/> :

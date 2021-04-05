@@ -10,7 +10,8 @@ export default function SortBar({setSortedBy}) {
     };
 
     return (
-        <div>
+        <div className={styles.sortBar}>
+            <div>Сортировка:</div>
             {
                 Object.keys(sortList).map((el) => {
                     return (
