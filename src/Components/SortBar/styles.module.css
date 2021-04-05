@@ -4,5 +4,37 @@
     background-color: lightblue;
     border-radius: 20px;
     margin-bottom: 10px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.radioBtnWrapper {
+    margin-left: 10px;
+}
+
+.sortBar input {
+    display: none;
+}
+
+.sortBar label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    height: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid lightblue;
+}
+
+.sortBar input[type="radio"]:not(:checked) + label:hover {
+    border: 2px solid cadetblue;
+    box-sizing: border-box;
+}
+
+.sortBar input[type="radio"]:checked + label {
+    background-color: cadetblue;
+    border: 2px solid cadetblue;
 }

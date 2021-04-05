@@ -10,7 +10,7 @@ export default function CategoryTreeBranchNode({imageSrc}) {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <img
                 className={styles.thumb}
                 src={`http://contest.elecard.ru/frontend_data/${imageSrc}`}

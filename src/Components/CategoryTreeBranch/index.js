@@ -11,7 +11,7 @@ export default function CategoryTreeBranch({categoryTitle, images}) {
     };
 
     return (
-        <div>
+        <div className={styles.branch}>
             <div>
                 <button onClick={expandHandleClick} className={styles.button}>{isShown ? '-' : '+'}</button>
                 <span>{categoryTitle}</span>
@@ -48,5 +48,4 @@ export default function CategoryTreeBranch({categoryTitle, images}) {
             {/*}*/}
         </div>
     )
-
 }

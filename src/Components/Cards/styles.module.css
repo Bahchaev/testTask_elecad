@@ -8,7 +8,7 @@
 .cards {
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 10px;
     padding: 10px;
     border-radius: 20px;
@@ -34,6 +34,7 @@
 
 .resetBtn {
     cursor: pointer;
+    margin: 10px;
     padding: 5px 10px;
     border-radius: 10px;
     outline: none;
@@ -48,4 +49,12 @@
 
 .resetBtn:active {
     transform: scale(0.9);
+}
+
+
+@media screen and (max-width: 520px) {
+    .footer {
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

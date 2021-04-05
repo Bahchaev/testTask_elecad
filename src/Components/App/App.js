@@ -5,6 +5,8 @@ import CategoryTree from "../CategoryTree";
 import Cards from "../Cards";
 import LoadBar from "../LoadBar";
 import ViewSwitcher from "../ViewSwitcher";
+import Footer from "../Footer";
+import Header from "../Header";
 
 function App() {
 
@@ -32,7 +34,7 @@ function App() {
                     setData(fetchedData);
 
                     //имитация задержки сервера для отображения инидкатора загрузки
-                    setTimeout(() => setIsLoaded(true), 20);
+                    setTimeout(() => setIsLoaded(true), 2000);
                 }
             )
             .catch((error) => {
@@ -49,12 +51,16 @@ function App() {
         const treeData = getTreeData(data);
         return (
             <div className={styles.app}>
-                <ViewSwitcher setView={setView}/>
-                {
-                    view === 'tree' ?
-                        <CategoryTree treeData={treeData}/> :
-                        <Cards initData={data}/>
-                }
+                <Header/>
+                <div className={styles.main}>
+                    <ViewSwitcher setView={setView}/>
+                    {
+                        view === 'tree' ?
+                            <CategoryTree treeData={treeData}/> :
+                            <Cards initData={data}/>
+                    }
+                </div>
+                <Footer/>
             </div>
         );
     }

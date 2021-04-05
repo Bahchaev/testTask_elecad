@@ -33,7 +33,7 @@
 }
 
 .vieSwitcher input[type="radio"]:not(:checked) + label:hover {
-    border: 1px solid black;
+    border: 2px solid lightblue;
 }
 
 .vieSwitcher input[type="radio"]:checked + label {

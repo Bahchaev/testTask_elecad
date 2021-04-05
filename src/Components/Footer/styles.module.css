@@ -1,0 +1,16 @@
+.footer {
+    position: fixed;
+    background-color: cadetblue;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.footer,
+.invisibleBlock {
+    height: 50px;
+}
