@@ -1,0 +1,41 @@
+.vieSwitcher {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: cadetblue;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.vieSwitcher input {
+    display: none;
+}
+
+.vieSwitcher label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    height: 30px;
+    width: 120px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.vieSwitcher label:first-of-type {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.vieSwitcher label:last-of-type {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.vieSwitcher input[type="radio"]:not(:checked) + label:hover {
+    border: 1px solid black;
+}
+
+.vieSwitcher input[type="radio"]:checked + label {
+    background-color: lightblue;
+}

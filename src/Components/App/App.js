@@ -4,6 +4,7 @@ import {doGetRequest} from "../../requests";
 import CategoryTree from "../CategoryTree";
 import Cards from "../Cards";
 import LoadBar from "../LoadBar";
+import ViewSwitcher from "../ViewSwitcher";
 
 function App() {
 
@@ -48,15 +49,7 @@ function App() {
         const treeData = getTreeData(data);
         return (
             <div className={styles.app}>
-                <div className={styles.vieSwitch}>
-                    <label htmlFor={'treeView'}>Дерево</label>
-                    <input type="radio" name={'view'} value={'tree'} id={'treeView'} onChange={() => setView('tree')}
-                           defaultChecked/>
-                    <input type="radio" name={'view'} value={'cards'} id={'cardView'}
-                           onChange={() => setView('cards')}/>
-                    <label htmlFor={'cardView'}>Карточки</label>
-                </div>
-
+                <ViewSwitcher setView={setView}/>
                 {
                     view === 'tree' ?
                         <CategoryTree treeData={treeData}/> :
