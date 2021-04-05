@@ -6,7 +6,7 @@ export default function Card({card, closeCard}) {
     const ref = useRef(null);
 
     const handleClick = () => {
-        ref.current.style.transform = 'scale(0.1, 0.1)';
+        ref.current.style.transform = 'scale(0.01, 0.01)';
         setTimeout(() => closeCard(), 500) //задерка перед закрытием для отображения анимации
     };
 

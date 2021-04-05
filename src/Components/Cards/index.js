@@ -43,7 +43,7 @@ export default function Cards({initData}) {
         const arr = [];
         for (
             let i = ((page - 1) * cardsInViewCount);
-            arr.length < cardsInViewCount && i<sortedFilteredCards.length;
+            arr.length < cardsInViewCount && i < sortedFilteredCards.length;
             i++
         ) {
             arr.push(sortedFilteredCards[i])
@@ -53,7 +53,7 @@ export default function Cards({initData}) {
 
     const cardsForView = getCardsForView();
     return (
-        <div>
+        <div className={styles.container}>
             <SortBar setSortedBy={setSortedBy}/>
             <div className={styles.cards}>
                 {cardsForView.map((card) => {
@@ -66,12 +66,18 @@ export default function Cards({initData}) {
                     )
                 })}
             </div>
-            <PaginationControlled
-                page={page}
-                setPage={setPage}
-                pagesCount={pagesCount}
-            />
-            <button onClick={resetClosedCards}>Return closed</button>
+            <div className={styles.footer}>
+                <div className={styles.pagination}>
+                    <PaginationControlled
+                        page={page}
+                        setPage={setPage}
+                        pagesCount={pagesCount}
+                    />
+                </div>
+                <div className={styles.closeBtnWrapper}>
+                    <button onClick={resetClosedCards} className={styles.resetBtn}>Return closed</button>
+                </div>
+            </div>
         </div>
     )
 }

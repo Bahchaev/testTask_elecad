@@ -1,8 +1,51 @@
+.container {
+    background-color: cadetblue;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
 .cards {
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     padding: 10px;
-    background-color: lightgray;
+    border-radius: 20px;
+    background-color: lightblue;
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.closeBtnWrapper {
+    margin: 0 auto;
+}
+
+.pagination {
+    border-radius: 30px;
+    background-color: lightblue;
+    display: inline-block;
+}
+
+.resetBtn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: lightyellow;
+    border: none;
+    height: 30px;
+}
+
+.resetBtn:hover {
+    background-color: indianred;
+}
+
+.resetBtn:active {
+    transform: scale(0.9);
 }

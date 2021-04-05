@@ -49,7 +49,6 @@ function App() {
         return (
             <div className={styles.app}>
                 <div className={styles.vieSwitch}>
-
                     <label htmlFor={'treeView'}>Дерево</label>
                     <input type="radio" name={'view'} value={'tree'} id={'treeView'} onChange={() => setView('tree')}
                            defaultChecked/>
