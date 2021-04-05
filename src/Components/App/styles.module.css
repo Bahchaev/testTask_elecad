@@ -6,10 +6,3 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
-
-.vieSwitch {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}

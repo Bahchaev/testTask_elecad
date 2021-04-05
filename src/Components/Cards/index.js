@@ -9,11 +9,11 @@ export default function Cards({initData}) {
     const [page, setPage] = useState(1);
     //количество отображаемых карточек высчитывается на 2 ряда.
     //const cardsInViewCount = Math.trunc((window.innerWidth-36) / 310)*2;
-    const [cardsInViewCount, setCardsInViewCount] = useState(Math.trunc((window.innerWidth-36) / 310)*2)
+    const [cardsInViewCount, setCardsInViewCount] = useState(Math.trunc((window.innerWidth-36) / 310)*2);
     let pagesCount = Math.trunc(initData / cardsInViewCount) + 1;
     const [closedCard, setClosedCard] = useState([]);
     const [sortedBy, setSortedBy] = useState('initial');
-    const ref = useRef(null)
+    const ref = useRef(null);
     const cards = initData.map((card, index) => {
         card.id = index;
         return card
@@ -54,6 +54,7 @@ export default function Cards({initData}) {
         return arr
     };
 
+    console.log(closedCard);
     //отслеживаем размер страницы и корректируем количество отображаемых карточек, чтобы они всегда занимали две строки
     window.addEventListener('resize', () => setCardsInViewCount(Math.trunc((window.innerWidth-36) / 310)*2));
 
