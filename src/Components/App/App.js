@@ -16,18 +16,6 @@ function App() {
     const [error, setError] = useState(null); // ошибки при загрузке данных с сервера
     const [view, setView] = useState('tree');
 
-    const getTreeData = (data) => {
-        let categories = {};
-        data.map((item) => {
-            if (!categories[item.category]) {
-                categories[item.category] = []
-            }
-            categories[item.category].push(item.image);
-        });
-
-        return categories
-    };
-
     useEffect(() => {
         doGetRequest("http://contest.elecard.ru/frontend_data/catalog.json")
             .then((fetchedData) => {
@@ -48,7 +36,7 @@ function App() {
     } else if (!isLoaded) {
         return <LoadBar/>
     } else {
-        const treeData = getTreeData(data);
+
         return (
             <div className={styles.app}>
                 <Header/>
@@ -56,7 +44,7 @@ function App() {
                     <ViewSwitcher setView={setView}/>
                     {
                         view === 'tree' ?
-                            <CategoryTree treeData={treeData}/> :
+                            <CategoryTree initialData={data}/> :
                             <Cards initData={data}/>
                     }
                 </div>

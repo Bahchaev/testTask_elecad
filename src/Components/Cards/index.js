@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import styles from './styles.module.css'
 import PaginationControlled from "../Pagination";
 import Card from "../Card";
